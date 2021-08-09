@@ -26,6 +26,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+[Redis with Laravel](https://trilon.io/blog/using-nestjs-microservices-with-laravel), 
+[Microservices with Redis](https://docs.nestjs.com/microservices/redis)
+
+[Ref. Github Example](https://github.com/itsmebhavin/nestjs-microservice-example)
+
 ## Installation
 
 ```bash
