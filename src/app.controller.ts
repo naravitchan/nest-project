@@ -8,6 +8,7 @@ export class AppController {
 
   // Define the message pattern for this method
   @MessagePattern('greeting')
+  // greeting & greeting.reply
   async hello(data: string)  {
     this.logger.log('hello ' + data.toString()); 
     return 'hello ' + data.toString()
