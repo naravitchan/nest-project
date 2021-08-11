@@ -1,12 +1,15 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Logger } from '@nestjs/common';
+import { MessagePattern, Ctx, Payload, RedisContext } from '@nestjs/microservices';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  // Create a logger instance
+  private logger = new Logger('AppController');
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  // Define the message pattern for this method
+  @MessagePattern('greeting')
+  async hello(data: string)  {
+    this.logger.log('hello ' + data.toString()); 
+    return 'hello ' + data.toString()
   }
 }
